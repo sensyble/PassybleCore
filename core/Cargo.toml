@@ -52,7 +52,7 @@ hkdf = "=0.12.4"
 # second copy of most of the stack.
 hpke = { version = "=0.12.0", default-features = false, features = ["alloc", "x25519"] }
 # Only here to turn on `zeroize` for the X25519 private keys hpke creates.
-x25519-dalek = { version = "=2.0.1", default-features = false, features = ["static_secrets", "zeroize"] }
+x25519-dalek = { version = "=3.0.0", default-features = false, features = ["static_secrets", "zeroize"] }
 hmac = "0.12"
 image = { version = "0.25", optional = true, default-features = false, features = ["png", "jpeg"] }
 # KeePass databases (feature `import-kdbx`). MIT.
