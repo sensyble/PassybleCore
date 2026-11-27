@@ -2213,7 +2213,7 @@ dependencies = [
  "aes 0.8.4",
  "aes-gcm",
  "argon2",
- "base64 0.22.1",
+ "base64 0.23.1",
  "cbc 0.1.2",
  "chacha20poly1305",
  "ciborium",
@@ -2303,7 +2303,7 @@ dependencies = [
 name = "passyble-mcp"
 version = "0.1.0"
 dependencies = [
- "base64 0.22.1",
+ "base64 0.23.1",
  "interprocess",
  "libc",
  "memchr",
