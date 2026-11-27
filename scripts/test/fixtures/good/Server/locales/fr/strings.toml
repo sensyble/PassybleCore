@@ -1,0 +1,13 @@
+[meta]
+name = "Français"
+dir = "ltr"
+
+[email]
+hello_subject = "Bonjour {{user}}"
+
+[time.days]
+one = "{{count}} jour"
+other = "{{count}} jours"
+
+[page]
+intro = "Bienvenue sur <b>{{server_name}}</b>."

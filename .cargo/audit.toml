@@ -1,0 +1,11 @@
+# cargo audit configuration (RustSec advisories), read from this folder by `cargo audit`, also when it
+# checks desktop-app/src-tauri/Cargo.lock (.github/workflows/dependency-audit.yml). Keep the ignore list
+# the same as deny.toml's [advisories] ignore, where each entry's reason is written down.
+[advisories]
+ignore = [
+    "RUSTSEC-2023-0071", # rsa via pgp: public-key decryption is never called
+    "RUSTSEC-2026-0387", # crypto-bigint 0.5 via pgp only: its public-key code is never called
+]
+
+[yanked]
+enabled = true

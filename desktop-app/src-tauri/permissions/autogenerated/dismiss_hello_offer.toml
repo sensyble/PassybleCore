@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-dismiss-hello-offer"
+description = "Enables the dismiss_hello_offer command without any pre-configured scope."
+commands.allow = ["dismiss_hello_offer"]
+
+[[permission]]
+identifier = "deny-dismiss-hello-offer"
+description = "Denies the dismiss_hello_offer command without any pre-configured scope."
+commands.deny = ["dismiss_hello_offer"]

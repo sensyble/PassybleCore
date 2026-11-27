@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-health-use-https"
+description = "Enables the health_use_https command without any pre-configured scope."
+commands.allow = ["health_use_https"]
+
+[[permission]]
+identifier = "deny-health-use-https"
+description = "Denies the health_use_https command without any pre-configured scope."
+commands.deny = ["health_use_https"]

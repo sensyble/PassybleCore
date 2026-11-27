@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-totp-popup-state"
+description = "Enables the totp_popup_state command without any pre-configured scope."
+commands.allow = ["totp_popup_state"]
+
+[[permission]]
+identifier = "deny-totp-popup-state"
+description = "Denies the totp_popup_state command without any pre-configured scope."
+commands.deny = ["totp_popup_state"]

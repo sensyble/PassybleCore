@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-vault-access"
+description = "Enables the org_vault_access command without any pre-configured scope."
+commands.allow = ["org_vault_access"]
+
+[[permission]]
+identifier = "deny-org-vault-access"
+description = "Denies the org_vault_access command without any pre-configured scope."
+commands.deny = ["org_vault_access"]

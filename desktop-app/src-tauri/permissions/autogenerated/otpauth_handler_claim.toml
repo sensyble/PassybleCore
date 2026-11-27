@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-otpauth-handler-claim"
+description = "Enables the otpauth_handler_claim command without any pre-configured scope."
+commands.allow = ["otpauth_handler_claim"]
+
+[[permission]]
+identifier = "deny-otpauth-handler-claim"
+description = "Denies the otpauth_handler_claim command without any pre-configured scope."
+commands.deny = ["otpauth_handler_claim"]

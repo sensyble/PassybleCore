@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-qrscan-review"
+description = "Enables the qrscan_review command without any pre-configured scope."
+commands.allow = ["qrscan_review"]
+
+[[permission]]
+identifier = "deny-qrscan-review"
+description = "Denies the qrscan_review command without any pre-configured scope."
+commands.deny = ["qrscan_review"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-test-alias-service"
+description = "Enables the test_alias_service command without any pre-configured scope."
+commands.allow = ["test_alias_service"]
+
+[[permission]]
+identifier = "deny-test-alias-service"
+description = "Denies the test_alias_service command without any pre-configured scope."
+commands.deny = ["test_alias_service"]

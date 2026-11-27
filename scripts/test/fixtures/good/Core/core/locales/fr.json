@@ -1,0 +1,5 @@
+{
+  "_meta": { "name": "French", "native": "Français" },
+  "webdav.auth_failed": "{action} : authentification refusée",
+  "merge.websites": { "one": "{count} site web", "other": "{count} sites web" }
+}

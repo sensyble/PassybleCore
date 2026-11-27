@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-support-diagnostics"
+description = "Enables the support_diagnostics command without any pre-configured scope."
+commands.allow = ["support_diagnostics"]
+
+[[permission]]
+identifier = "deny-support-diagnostics"
+description = "Denies the support_diagnostics command without any pre-configured scope."
+commands.deny = ["support_diagnostics"]

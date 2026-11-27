@@ -1,0 +1,4 @@
+{
+  "_meta": { "name": "Japanese", "native": "日本語" },
+  "merge.websites": { "one": "ウェブサイト", "other": "{count} 件のウェブサイト" }
+}

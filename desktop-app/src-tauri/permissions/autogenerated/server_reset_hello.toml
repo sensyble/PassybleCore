@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-reset-hello"
+description = "Enables the server_reset_hello command without any pre-configured scope."
+commands.allow = ["server_reset_hello"]
+
+[[permission]]
+identifier = "deny-server-reset-hello"
+description = "Denies the server_reset_hello command without any pre-configured scope."
+commands.deny = ["server_reset_hello"]

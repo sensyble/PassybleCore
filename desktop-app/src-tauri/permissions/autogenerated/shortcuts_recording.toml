@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-shortcuts-recording"
+description = "Enables the shortcuts_recording command without any pre-configured scope."
+commands.allow = ["shortcuts_recording"]
+
+[[permission]]
+identifier = "deny-shortcuts-recording"
+description = "Denies the shortcuts_recording command without any pre-configured scope."
+commands.deny = ["shortcuts_recording"]

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="greet">Hallo <xliff:g id="name">%1$s</xliff:g>, it's done</string>
+    <string name="charset">A bis Z</string>
+    <string name="save_sync">Speichern %s</string>
+    <string name="markup">@string/app_name</string>
+    <string name="bye">Tschüss</string>
+    <plurals name="items">
+        <item quantity="few"><xliff:g id="n">%1$d</xliff:g> Einträge</item>
+        <item quantity="other"><xliff:g id="n">%2$d</xliff:g> Einträge</item>
+    </plurals>
+</resources>

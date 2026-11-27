@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-quickpick-generate"
+description = "Enables the quickpick_generate command without any pre-configured scope."
+commands.allow = ["quickpick_generate"]
+
+[[permission]]
+identifier = "deny-quickpick-generate"
+description = "Denies the quickpick_generate command without any pre-configured scope."
+commands.deny = ["quickpick_generate"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-offboard"
+description = "Enables the org_offboard command without any pre-configured scope."
+commands.allow = ["org_offboard"]
+
+[[permission]]
+identifier = "deny-org-offboard"
+description = "Denies the org_offboard command without any pre-configured scope."
+commands.deny = ["org_offboard"]

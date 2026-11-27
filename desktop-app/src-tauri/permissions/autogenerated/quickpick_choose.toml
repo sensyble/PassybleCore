@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-quickpick-choose"
+description = "Enables the quickpick_choose command without any pre-configured scope."
+commands.allow = ["quickpick_choose"]
+
+[[permission]]
+identifier = "deny-quickpick-choose"
+description = "Denies the quickpick_choose command without any pre-configured scope."
+commands.deny = ["quickpick_choose"]

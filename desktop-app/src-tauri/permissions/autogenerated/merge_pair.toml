@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-merge-pair"
+description = "Enables the merge_pair command without any pre-configured scope."
+commands.allow = ["merge_pair"]
+
+[[permission]]
+identifier = "deny-merge-pair"
+description = "Denies the merge_pair command without any pre-configured scope."
+commands.deny = ["merge_pair"]

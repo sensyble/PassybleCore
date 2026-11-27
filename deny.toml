@@ -1,0 +1,87 @@
+# cargo-deny configuration for the core workspace (core, agent, native-host, wasm, wasm/kdf).
+# CI runs `cargo deny --all-features --locked check` (.github/workflows/dependency-audit.yml); locally the
+# same command works from this folder once cargo-deny is installed. Docs:
+# https://embarkstudios.github.io/cargo-deny/
+#
+# The desktop app (desktop-app/src-tauri) is a workspace of its own that needs the sibling Windows, macOS
+# and Linux repositories to resolve, so cargo deny doesn't check it here; cargo audit checks its
+# Cargo.lock instead (same workflow).
+
+[graph]
+# Every target: the core ships to Windows, macOS, Linux, Android, iOS and wasm32.
+targets = []
+all-features = true
+
+[advisories]
+# Unmaintained and unsound crates fail when we depend on them directly; deeper ones are warnings.
+unmaintained = "workspace"
+unsound = "workspace"
+yanked = "deny"
+# Each ignore says why the advisory can't reach Passyble's code and when to look again. Keep this list
+# short: an advisory that does apply is fixed by updating, never ignored.
+ignore = [
+    # rsa (Marvin timing attack on RSA decryption), pulled in by pgp. Passyble only decrypts
+    # passphrase-protected OpenPGP messages (symmetric); pgp's public-key code, including rsa, is never
+    # called (THIRD_PARTY_NOTICES.md, "Rust crates for encrypted imports"). No fixed rsa 0.9 exists.
+    { id = "RUSTSEC-2023-0071", reason = "rsa decryption is never called: only symmetric OpenPGP decryption is used" },
+    # crypto-bigint 0.5 (timing variability in operations meant to be constant-time), now only pulled in
+    # by pgp's elliptic-curve code (p256/p384/p521/k256 0.13, cx448). Passkey signing moved to p256 0.14
+    # (crypto-bigint 0.7, fixed); pgp's public-key code is never called (see rsa above). No pgp release
+    # uses elliptic-curve 0.14 yet: look again then.
+    { id = "RUSTSEC-2026-0387", reason = "only through pgp, whose public-key code is never called; passkeys use the fixed crypto-bigint 0.7", expiry = "2027-03-01" },
+]
+
+[licenses]
+# Permissive licences, plus MPL-2.0 (uniffi, the Android and iOS bindings; file-level copyleft, used
+# unmodified) and CDLA-Permissive-2.0 (webpki-roots' certificate data). Everything else needs a decision
+# first and an entry in THIRD_PARTY_NOTICES.md. A crate with "A OR B" passes when one of them is here.
+allow = [
+    "0BSD",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "BSL-1.0",
+    "CC0-1.0",
+    "CDLA-Permissive-2.0",
+    "ISC",
+    "MIT",
+    "MPL-2.0",
+    "Unicode-3.0",
+    "Zlib",
+]
+confidence-threshold = 0.9
+# Passyble's own crates (AGPL-3.0-or-later, the project's licence).
+exceptions = [
+    { allow = ["AGPL-3.0-or-later"], crate = "pass-core" },
+    { allow = ["AGPL-3.0-or-later"], crate = "pass-agent" },
+    { allow = ["AGPL-3.0-or-later"], crate = "pass-native-host" },
+    { allow = ["AGPL-3.0-or-later"], crate = "pass-wasm" },
+    { allow = ["AGPL-3.0-or-later"], crate = "pass-wasm-kdf" },
+    { allow = ["AGPL-3.0-or-later"], crate = "passyble-mcp" },
+]
+# The list covers every feature combination; not every build uses every licence.
+unused-allowed-license = "allow"
+
+[licenses.private]
+ignore = false
+
+[bans]
+multiple-versions = "warn"
+# agent and native-host depend on core by path without a version; that is fine inside this workspace.
+wildcards = "warn"
+allow-wildcard-paths = true
+highlight = "all"
+deny = [
+    # TLS is rustls everywhere (no OpenSSL, no native-tls): keep it that way.
+    { crate = "openssl", reason = "Passyble uses rustls only" },
+    { crate = "openssl-sys", reason = "Passyble uses rustls only" },
+    { crate = "native-tls", reason = "Passyble uses rustls only" },
+]
+
+[sources]
+# crates.io only: no git dependencies, no other registries.
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []

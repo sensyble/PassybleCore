@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-send-pick-file"
+description = "Enables the send_pick_file command without any pre-configured scope."
+commands.allow = ["send_pick_file"]
+
+[[permission]]
+identifier = "deny-send-pick-file"
+description = "Denies the send_pick_file command without any pre-configured scope."
+commands.deny = ["send_pick_file"]

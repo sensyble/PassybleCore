@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-extension-copy"
+description = "Enables the extension_copy command without any pre-configured scope."
+commands.allow = ["extension_copy"]
+
+[[permission]]
+identifier = "deny-extension-copy"
+description = "Denies the extension_copy command without any pre-configured scope."
+commands.deny = ["extension_copy"]

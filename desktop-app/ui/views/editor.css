@@ -1,0 +1,37 @@
+.url-rows { display: flex; flex-direction: column; gap: 6px; }
+.url-rows:empty { display: none; }
+.url-actions { gap: 8px; align-items: center; }
+.app-row { display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 2px 0 10px; border-radius: var(--r-input); box-shadow: inset 0 0 0 1px var(--border); }
+.app-row > svg { width: 16px; height: 16px; flex: none; color: var(--text-3); }
+.app-row > .grow { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.rule-badge { flex: none; padding: 0 7px; border-radius: var(--r-pill); background: var(--fill-selected); color: var(--text-2); font-size: 11px; font-weight: 600; line-height: 20px; white-space: nowrap; }
+.rule-badge[hidden] { display: none; }
+
+.rule-menu { max-width: min(340px, calc(100vw - 16px)); }
+.rule-menu .menu-item { align-items: flex-start; }
+.rule-menu .menu-text { flex: 1; min-width: 0; }
+.rule-menu .menu-item .menu-check { width: 14px; height: 14px; margin-top: 3px; color: var(--lime-mark); stroke-width: 2.5; }
+.rule-name { display: flex; align-items: center; gap: 6px; }
+.rule-suggested { padding: 0 6px; border-radius: var(--r-pill); background: var(--accent-soft); color: var(--accent); font-size: 10.5px; font-weight: 600; line-height: 17px; }
+
+.input-group > .btn.icon.gen-more { min-width: 20px; width: 20px; margin-left: -2px; padding: 0; border-color: transparent; border-radius: 6px; }
+.input-group > .btn.icon.gen-more svg { width: 14px; height: 14px; }
+.menu.generator.gen-drop { width: min(340px, calc(100vw - 16px)); gap: 12px; padding: 14px 16px; background: var(--surface-raised); }
+
+.site-field { position: relative; flex: 1; min-width: 0; }
+.site-suggest .tag-option { gap: 10px; padding: 6px 8px; }
+.site-suggest .avatar { width: 24px; height: 24px; border-radius: 6px; font-size: 11px; }
+.site-suggest .avatar svg { width: 14px; height: 14px; }
+.site-suggest .faint { font-size: 12px; white-space: nowrap; }
+
+/* A note's text and other kinds' notes share one field, moved between two slots that add no box. */
+.more-toggle { display: flex; align-items: center; gap: 8px; margin: 0 -24px -24px; padding: 14px 24px 16px; border: 0; border-top: 1px solid var(--border); border-radius: 0 0 var(--r-card) var(--r-card); background: transparent; color: var(--text); font: inherit; font-size: 14px; font-weight: 600; text-align: left; cursor: default; }
+.more-toggle:hover { background: var(--fill-hover); }
+.more-toggle:focus-visible { outline-offset: -2px; }
+.more-toggle > svg { width: 18px; height: 18px; flex: none; color: var(--text-3); transition: transform 0.12s; }
+.more-toggle[aria-expanded="true"] > svg { transform: rotate(180deg); }
+.more-body { display: flex; flex-direction: column; gap: 16px; }
+.notes-slot { display: contents; }
+.notes-count { margin-top: 4px; text-align: end; }
+.notes-count.full { color: var(--danger); }

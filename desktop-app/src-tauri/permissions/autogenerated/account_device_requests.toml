@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-account-device-requests"
+description = "Enables the account_device_requests command without any pre-configured scope."
+commands.allow = ["account_device_requests"]
+
+[[permission]]
+identifier = "deny-account-device-requests"
+description = "Denies the account_device_requests command without any pre-configured scope."
+commands.deny = ["account_device_requests"]

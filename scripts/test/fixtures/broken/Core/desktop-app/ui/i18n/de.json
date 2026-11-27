@@ -1,0 +1,7 @@
+{
+  "greet.hello": "Hallo {nme}",
+  "greet.bye": "Tschüss",
+  "items.count": { "one": "{count} Eintrag", "few": "{count} Einträge" },
+  "items.in_folder": "{count} Einträge in {folder}",
+  "app.title": ""
+}

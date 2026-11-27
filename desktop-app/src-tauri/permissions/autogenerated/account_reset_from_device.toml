@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-account-reset-from-device"
+description = "Enables the account_reset_from_device command without any pre-configured scope."
+commands.allow = ["account_reset_from_device"]
+
+[[permission]]
+identifier = "deny-account-reset-from-device"
+description = "Denies the account_reset_from_device command without any pre-configured scope."
+commands.deny = ["account_reset_from_device"]

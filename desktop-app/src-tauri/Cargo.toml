@@ -1,0 +1,175 @@
+[package]
+name = "pass-desktop"
+description = "Pass for Windows: vault UI, tray, global shortcuts (Quick Access, QR scan, auto-type), TOTP popup and passkey consent around the desktop agent"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+default-run = "Pass"
+
+[[bin]]
+name = "Pass"
+path = "src/main.rs"
+
+[features]
+default = ["webdav", "gdrive", "icons"]
+# WebDAV sync (pulls in rustls/ring through ureq). Also the version requirements check
+# (app_versions.rs), over the same ureq/rustls stack.
+webdav = ["pass-agent/webdav", "pass-core/webdav", "dep:ureq", "dep:rustls"]
+# Google Drive backup (docs/GOOGLE_DRIVE.md): OAuth loopback + PKCE sign-in, token refresh over the
+# same ureq/rustls stack. Shown only when the build has an OAuth client ID (build.rs).
+gdrive = ["webdav", "pass-agent/gdrive", "pass-core/gdrive"]
+# Website icons on item avatars (pass-core `icons`; fetched in the background, cached on disk).
+icons = ["webdav", "pass-agent/icons", "pass-core/icons"]
+# The in-app updater on macOS (updates.rs). Off until Mac releases are signed with a Developer ID
+# and notarized and latest.json carries their darwin-* entries (macOS/README.md, "Updates"):
+# macOS/scripts/build-macos.sh --updater turns it on. Without it a Mac never asks the update
+# feed and links to the download page instead.
+macos-updater = []
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+arboard = "3"
+# Website icons as data URLs for the windows (site_icons.rs); also the Windows code's base64.
+base64 = "0.22"
+# Windows Hello key wrapping (hello/keywrap.rs); the versions pass-core already uses.
+chacha20poly1305 = "0.10"
+hmac = "0.12"
+rand = "0.8"
+sha2 = "0.10"
+# RSASSA-PKCS1-v1_5 check of the Windows Hello key's signature at enrollment (already in the tree
+# through rustls).
+ring = "0.17"
+# CTAP2 CBOR for the Windows passkey provider (passkey_provider/ctap.rs).
+ciborium = "0.2"
+dirs = "6"
+keyring = { version = "3", features = ["windows-native", "apple-native", "linux-native"] }
+# `import-qr`: the extension popup's "Scan QR on this page" (`totp.from_image`).
+pass-agent = { path = "../../agent", default-features = false, features = ["native", "import-qr"] }
+# `import-qr`: read Google Authenticator export QR codes from screenshots (Settings → Import).
+# `import-kdbx`, `import-pgp`: KeePass databases and PGP-encrypted Proton Pass exports (Import).
+pass-core = { path = "../../core", default-features = false, features = ["import-qr", "import-kdbx", "import-pgp"] }
+# The QR code of a new two-factor secret (Settings → Passyble Server), drawn locally; the version
+# pass-core, pass-agent and the server already use.
+qrcode = { version = "0.14", default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-dialog = "2"
+# Google OAuth token endpoint (feature `gdrive`) and the version requirements check (feature
+# `webdav`); the same ureq 2 + rustls instance pass-core uses.
+ureq = { version = "2", optional = true }
+# Certificate pins for Passyble Server in the Teams and Family client (teams_api.rs), checked as
+# pass-core does; the rustls instance ureq and pass-core already use (no new package).
+rustls = { version = "0.23", optional = true, default-features = false, features = ["ring", "std", "tls12"] }
+tauri-plugin-global-shortcut = "2"
+# `deep-link`: a second launch with a pass+server:// URL (clicked in an e-mail or browser) hands it
+# to the running instance through the deep-link plugin.
+tauri-plugin-deep-link = "2"
+tauri-plugin-single-instance = { version = "2", features = ["deep-link"] }
+# Signed in-app updates (Settings → Updates): checks latest.json on the public releases repo,
+# downloads the NSIS installer, verifies its minisign signature against the key in
+# tauri.conf.json and runs it in passive mode (the installer restarts Pass).
+# 2.13.2+ enforces `requireSignedVersion` (tauri.conf.json); older versions ignore it.
+tauri-plugin-updater = { version = "2.13.2", default-features = false, features = ["rustls-tls", "system-proxy"] }
+uuid = { version = "1", features = ["v4"] }
+zeroize = "1"
+
+[target.'cfg(windows)'.dependencies]
+# The Windows system code: windows, auto-type input, session lock, DPAPI, Windows Hello, processes,
+# clipboard (Windows/README.md). src/platform/win32.rs maps the platform API onto it.
+pass-windows = { path = "../../../Windows/platform" }
+winreg = "0.56"
+# `#[implement]` / `#[interface]` (COM class of the passkey provider) refer to `windows_core`.
+windows-core = "0.62"
+# The webviews' memory while hidden (webview_memory.rs): TrySuspend, MemoryUsageTargetLevel. The
+# version wry uses, so its controller is the same type.
+webview2-com = "0.39"
+windows-future = "0.3"
+windows = { version = "0.62", features = [
+    # Passkey provider: registering its package with external location (PackageManager).
+    "ApplicationModel",
+    "Foundation",
+    "Management_Deployment",
+    "Security_Credentials",
+    "Security_Credentials_UI",
+    # Windows Hello keys (KeyCredentialManager) for the vault key binding in hello.rs.
+    "Security_Cryptography",
+    "Security_Cryptography_Core",
+    "Storage_Streams",
+    "Win32_Foundation",
+    # Windows' display languages for the UI language (i18n.rs).
+    "Win32_Globalization",
+    # "Scan QR code on screen" (screen_qr.rs): the monitors' pixels in memory (BitBlt, GetDIBits).
+    "Win32_Graphics_Gdi",
+    "Win32_Security",
+    "Win32_Security_Cryptography",
+    "Win32_Storage_Packaging_Appx",
+    "Win32_System_Com",
+    # The extension setup guide: is pass-native-host.exe running, and for which browser (setup_guide.rs).
+    "Win32_System_Diagnostics_ToolHelp",
+    # Wiping an otpauth:// link from the process' command line (otpauth.rs).
+    "Win32_System_Environment",
+    "Win32_System_LibraryLoader",
+    "Win32_System_RemoteDesktop",
+    "Win32_System_Threading",
+    "Win32_System_WinRT",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+# Touch ID, Keychain, Secure Enclave, auto-type and the other macOS system code (macOS/README.md).
+pass-macos = { path = "../../../macOS/platform" }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+# Secret Service device key, browser connector, autostart, session lock, clipboard and the other
+# Linux system code (Linux/README.md). src/platform/linux.rs maps the platform API onto it.
+pass-linux = { path = "../../../Linux/platform" }
+# Settings secrets and the Google token in the Secret Service (GNOME Keyring, KWallet), cached in
+# the kernel keyring: "linux-native" alone is the kernel keyring only, which forgets them at
+# reboot. Cargo adds these features to the keyring above on Linux only. No Linux build has
+# shipped, so there are no kernel-keyring-only secrets to migrate.
+keyring = { version = "3", features = ["linux-native-sync-persistent", "crypto-rust"] }
+
+[dev-dependencies]
+# Signs test requests for the passkey provider's CNG signature check.
+p256 = { version = "0.14", features = ["ecdsa"] }
+
+# Its own Cargo workspace (Core/Cargo.toml excludes it): the platform crates in the sibling
+# repositories ../../../Windows/platform, ../../../macOS/platform and ../../../Linux/platform are
+# only needed here.
+[workspace]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/sensyble/PassybleCore"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+
+# Less debug info: smaller target dirs, much less RAM and time when linking. Backtraces still
+# have file and line numbers for our code; dependencies get none.
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false
+
+# The browser extension's WebAssembly (Extension/scripts/build-wasm.mjs): the main module is built
+# for size; the Argon2id module (pass-wasm-kdf) keeps the release profile, for speed.
+[profile.wasm-release]
+inherits = "release"
+opt-level = "z"
+
+# Argon2 with production parameters is painfully slow unoptimised; keep debug builds usable.
+[profile.dev.package.argon2]
+opt-level = 3
+[profile.dev.package.blake2]
+opt-level = 3

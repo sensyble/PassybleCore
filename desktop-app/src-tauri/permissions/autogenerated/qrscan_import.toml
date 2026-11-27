@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-qrscan-import"
+description = "Enables the qrscan_import command without any pre-configured scope."
+commands.allow = ["qrscan_import"]
+
+[[permission]]
+identifier = "deny-qrscan-import"
+description = "Denies the qrscan_import command without any pre-configured scope."
+commands.deny = ["qrscan_import"]

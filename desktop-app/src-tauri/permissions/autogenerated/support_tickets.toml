@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-support-tickets"
+description = "Enables the support_tickets command without any pre-configured scope."
+commands.allow = ["support_tickets"]
+
+[[permission]]
+identifier = "deny-support-tickets"
+description = "Denies the support_tickets command without any pre-configured scope."
+commands.deny = ["support_tickets"]

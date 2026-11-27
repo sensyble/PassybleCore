@@ -1,0 +1,14 @@
+[meta]
+name = "日本語"
+dir = "ltr"
+
+[email]
+hello_subject = "こんにちは {{user}}"
+
+[time.days]
+one = "{{count}} 日"
+other = "{{count}} 日"
+
+[page]
+intro = "<b>{{server_name}}</b> へようこそ。"
+note = "長いメモ"

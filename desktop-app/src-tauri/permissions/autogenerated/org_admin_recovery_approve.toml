@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-admin-recovery-approve"
+description = "Enables the org_admin_recovery_approve command without any pre-configured scope."
+commands.allow = ["org_admin_recovery_approve"]
+
+[[permission]]
+identifier = "deny-org-admin-recovery-approve"
+description = "Denies the org_admin_recovery_approve command without any pre-configured scope."
+commands.deny = ["org_admin_recovery_approve"]

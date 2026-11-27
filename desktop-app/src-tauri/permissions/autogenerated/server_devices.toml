@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-devices"
+description = "Enables the server_devices command without any pre-configured scope."
+commands.allow = ["server_devices"]
+
+[[permission]]
+identifier = "deny-server-devices"
+description = "Denies the server_devices command without any pre-configured scope."
+commands.deny = ["server_devices"]

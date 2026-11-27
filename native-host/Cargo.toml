@@ -1,0 +1,15 @@
+[package]
+name = "pass-native-host"
+description = "Browser Native Messaging host that relays to the Pass desktop agent"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+interprocess = "2"
+# `native`: the agent's local IPC client (`ipc::connect`) and timing log.
+pass-agent = { path = "../agent", default-features = false, features = ["native"] }
+serde_json = "1"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_UI_WindowsAndMessaging"] }

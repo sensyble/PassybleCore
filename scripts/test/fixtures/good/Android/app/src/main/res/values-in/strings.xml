@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Passyble</string>
+    <string name="greet">Halo <xliff:g id="name">%1$s</xliff:g>, <xliff:g id="pct">%2$d</xliff:g>%% selesai</string>
+    <string name="save_sync">Simpan &amp; sinkronkan</string>
+    <string name="markup"><![CDATA[<b>Tebal</b>]]> teks</string>
+    <plurals name="items">
+        <item quantity="other"><xliff:g id="n">%1$d</xliff:g> item</item>
+    </plurals>
+</resources>

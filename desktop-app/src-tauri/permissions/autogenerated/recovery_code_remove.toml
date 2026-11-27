@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-recovery-code-remove"
+description = "Enables the recovery_code_remove command without any pre-configured scope."
+commands.allow = ["recovery_code_remove"]
+
+[[permission]]
+identifier = "deny-recovery-code-remove"
+description = "Denies the recovery_code_remove command without any pre-configured scope."
+commands.deny = ["recovery_code_remove"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-signin-new-vault"
+description = "Enables the server_signin_new_vault command without any pre-configured scope."
+commands.allow = ["server_signin_new_vault"]
+
+[[permission]]
+identifier = "deny-server-signin-new-vault"
+description = "Denies the server_signin_new_vault command without any pre-configured scope."
+commands.deny = ["server_signin_new_vault"]

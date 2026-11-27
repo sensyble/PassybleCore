@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-favorites"
+description = "Enables the set_favorites command without any pre-configured scope."
+commands.allow = ["set_favorites"]
+
+[[permission]]
+identifier = "deny-set-favorites"
+description = "Denies the set_favorites command without any pre-configured scope."
+commands.deny = ["set_favorites"]

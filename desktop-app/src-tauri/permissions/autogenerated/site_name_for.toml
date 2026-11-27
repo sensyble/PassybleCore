@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-site-name-for"
+description = "Enables the site_name_for command without any pre-configured scope."
+commands.allow = ["site_name_for"]
+
+[[permission]]
+identifier = "deny-site-name-for"
+description = "Denies the site_name_for command without any pre-configured scope."
+commands.deny = ["site_name_for"]

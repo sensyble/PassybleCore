@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-vault-path-synced"
+description = "Enables the vault_path_synced command without any pre-configured scope."
+commands.allow = ["vault_path_synced"]
+
+[[permission]]
+identifier = "deny-vault-path-synced"
+description = "Denies the vault_path_synced command without any pre-configured scope."
+commands.deny = ["vault_path_synced"]

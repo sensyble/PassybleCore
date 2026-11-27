@@ -1,0 +1,59 @@
+# Dependency checks (SECURITY.md): cargo deny (advisories, bans, licences, sources: deny.toml) for the core
+# workspace, and cargo audit (RustSec advisories: .cargo/audit.toml) for both lockfiles, the workspace's
+# Cargo.lock and the desktop app's desktop-app/src-tauri/Cargo.lock. Runs on every push and pull request,
+# and every Monday, so a new advisory against an unchanged lockfile still shows up.
+#
+# Third-party actions are pinned to full commit SHAs (the tag is in the comment); Dependabot
+# (.github/dependabot.yml) proposes updates. The tools are pinned to exact versions and installed from
+# their release binaries with checksums (taiki-e/install-action, no build from source).
+name: Dependency audit
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cargo-deny:
+    name: cargo deny (core workspace)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: taiki-e/install-action@fe3acb53a98b62c772db35de75ce0e4595e7ca8c # v2.90.8
+        with:
+          tool: cargo-deny@0.22.0
+          fallback: none
+      - name: cargo deny check
+        run: cargo deny --all-features --locked check
+
+  cargo-audit:
+    name: cargo audit (Cargo.lock and the desktop app's Cargo.lock)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: taiki-e/install-action@fe3acb53a98b62c772db35de75ce0e4595e7ca8c # v2.90.8
+        with:
+          tool: cargo-audit@0.23.0
+          fallback: none
+      # Both from the repository root, so .cargo/audit.toml applies to both. Reading a lockfile needs
+      # no build and no sibling repository (the desktop app's Windows, macOS and Linux platform crates).
+      - name: cargo audit (core workspace)
+        run: cargo audit --file Cargo.lock
+      - name: cargo audit (desktop app)
+        if: ${{ !cancelled() }}
+        run: cargo audit --file desktop-app/src-tauri/Cargo.lock

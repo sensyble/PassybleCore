@@ -1,0 +1,44 @@
+[package]
+name = "passyble-mcp"
+description = "The Passyble connector for AI tools: an MCP server that runs commands with secrets from the Passyble vault"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "passyble_mcp"
+path = "src/lib.rs"
+
+[[bin]]
+name = "passyble-mcp"
+path = "src/main.rs"
+
+[dependencies]
+# Secrets in command output, also base64-encoded (src/mask.rs); already in the tree through pass-core.
+base64 = "0.22"
+# Substring search for the concealing; already in the tree through csv.
+memchr = "2"
+# `native`: the agent's local IPC client (`ipc::connect`, `ipc::server_is_allowed`).
+pass-agent = { path = "../agent", default-features = false, features = ["native"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+zeroize = "1"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    # The command's process tree (src/run.rs).
+    "Win32_System_JobObjects",
+    # The program that started the connector (src/process.rs).
+    "Win32_System_Diagnostics_ToolHelp",
+] }
+
+[target.'cfg(unix)'.dependencies]
+# Stopping the command's process group (src/run.rs).
+libc = "0.2"
+
+[dev-dependencies]
+interprocess = "2"
+pass-core = { path = "../core", default-features = false }
+tempfile = "3"

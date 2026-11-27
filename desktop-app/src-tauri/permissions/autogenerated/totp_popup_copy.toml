@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-totp-popup-copy"
+description = "Enables the totp_popup_copy command without any pre-configured scope."
+commands.allow = ["totp_popup_copy"]
+
+[[permission]]
+identifier = "deny-totp-popup-copy"
+description = "Denies the totp_popup_copy command without any pre-configured scope."
+commands.deny = ["totp_popup_copy"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-otpauth-cancel"
+description = "Enables the otpauth_cancel command without any pre-configured scope."
+commands.allow = ["otpauth_cancel"]
+
+[[permission]]
+identifier = "deny-otpauth-cancel"
+description = "Denies the otpauth_cancel command without any pre-configured scope."
+commands.deny = ["otpauth_cancel"]

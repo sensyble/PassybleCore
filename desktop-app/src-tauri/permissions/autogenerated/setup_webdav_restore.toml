@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-setup-webdav-restore"
+description = "Enables the setup_webdav_restore command without any pre-configured scope."
+commands.allow = ["setup_webdav_restore"]
+
+[[permission]]
+identifier = "deny-setup-webdav-restore"
+description = "Denies the setup_webdav_restore command without any pre-configured scope."
+commands.deny = ["setup_webdav_restore"]

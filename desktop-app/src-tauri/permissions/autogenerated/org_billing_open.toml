@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-billing-open"
+description = "Enables the org_billing_open command without any pre-configured scope."
+commands.allow = ["org_billing_open"]
+
+[[permission]]
+identifier = "deny-org-billing-open"
+description = "Denies the org_billing_open command without any pre-configured scope."
+commands.deny = ["org_billing_open"]

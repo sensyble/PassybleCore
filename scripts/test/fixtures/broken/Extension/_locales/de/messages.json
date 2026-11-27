@@ -1,0 +1,7 @@
+{
+  "catalogLocale": { "message": "en" },
+  "extName": { "message": "  " },
+  "popupLookUp": { "message": "$USER$ auf $SEITE$ suchen", "placeholders": { "site": { "content": "$1" }, "user": { "content": "$2" } } },
+  "popupUnknown": { "message": "Unbekannt" },
+  "badgeLogins_one": { "message": "$COUNT$ Login", "placeholders": { "count": { "content": "$1" } } }
+}

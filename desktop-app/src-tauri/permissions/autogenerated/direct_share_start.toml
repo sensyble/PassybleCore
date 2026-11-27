@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-direct-share-start"
+description = "Enables the direct_share_start command without any pre-configured scope."
+commands.allow = ["direct_share_start"]
+
+[[permission]]
+identifier = "deny-direct-share-start"
+description = "Denies the direct_share_start command without any pre-configured scope."
+commands.deny = ["direct_share_start"]

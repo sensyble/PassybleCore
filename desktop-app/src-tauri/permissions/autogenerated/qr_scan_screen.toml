@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-qr-scan-screen"
+description = "Enables the qr_scan_screen command without any pre-configured scope."
+commands.allow = ["qr_scan_screen"]
+
+[[permission]]
+identifier = "deny-qr-scan-screen"
+description = "Denies the qr_scan_screen command without any pre-configured scope."
+commands.deny = ["qr_scan_screen"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-confirm"
+description = "Enables the org_confirm command without any pre-configured scope."
+commands.allow = ["org_confirm"]
+
+[[permission]]
+identifier = "deny-org-confirm"
+description = "Denies the org_confirm command without any pre-configured scope."
+commands.deny = ["org_confirm"]

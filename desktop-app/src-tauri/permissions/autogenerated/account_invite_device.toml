@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-account-invite-device"
+description = "Enables the account_invite_device command without any pre-configured scope."
+commands.allow = ["account_invite_device"]
+
+[[permission]]
+identifier = "deny-account-invite-device"
+description = "Denies the account_invite_device command without any pre-configured scope."
+commands.deny = ["account_invite_device"]

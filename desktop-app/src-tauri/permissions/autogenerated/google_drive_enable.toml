@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-google-drive-enable"
+description = "Enables the google_drive_enable command without any pre-configured scope."
+commands.allow = ["google_drive_enable"]
+
+[[permission]]
+identifier = "deny-google-drive-enable"
+description = "Denies the google_drive_enable command without any pre-configured scope."
+commands.deny = ["google_drive_enable"]

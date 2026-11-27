@@ -1,0 +1,7 @@
+{
+  "catalogLocale": { "message": "de" },
+  "extName": { "message": "Passyble" },
+  "popupLookUp": { "message": "$USER$ auf $SITE$ suchen", "placeholders": { "site": { "content": "$1", "example": "github.com" }, "user": { "content": "$2" } } },
+  "badgeLogins_one": { "message": "$COUNT$ Login", "placeholders": { "count": { "content": "$1" } } },
+  "badgeLogins_other": { "message": "$COUNT$ Logins", "placeholders": { "count": { "content": "$1" } } }
+}

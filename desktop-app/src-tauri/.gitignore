@@ -1,0 +1,8 @@
+/target
+/gen/schemas
+/binaries
+# Passkey provider package files staged by Windows/installer/packaging/build-sparse-package.ps1 (bundle resource)
+/package
+# Browser extension staged by scripts/stage-extension.mjs (bundle resource)
+/extension
+/extension-firefox.zip

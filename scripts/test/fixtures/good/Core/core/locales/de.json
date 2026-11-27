@@ -1,0 +1,6 @@
+{
+  "_meta": { "name": "German", "native": "Deutsch" },
+  "server.enter_address": "Gib die Serveradresse ein",
+  "webdav.auth_failed": "{action}: Anmeldung abgelehnt",
+  "merge.websites": { "one": "Website", "other": "{count} Websites" }
+}

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-policies-set"
+description = "Enables the org_policies_set command without any pre-configured scope."
+commands.allow = ["org_policies_set"]
+
+[[permission]]
+identifier = "deny-org-policies-set"
+description = "Denies the org_policies_set command without any pre-configured scope."
+commands.deny = ["org_policies_set"]

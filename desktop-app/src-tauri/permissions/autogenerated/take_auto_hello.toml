@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-take-auto-hello"
+description = "Enables the take_auto_hello command without any pre-configured scope."
+commands.allow = ["take_auto_hello"]
+
+[[permission]]
+identifier = "deny-take-auto-hello"
+description = "Denies the take_auto_hello command without any pre-configured scope."
+commands.deny = ["take_auto_hello"]

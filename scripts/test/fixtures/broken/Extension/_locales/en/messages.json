@@ -1,0 +1,11 @@
+{
+  "catalogLocale": { "message": "en", "description": "Not shown: the folder name with a dash." },
+  "extName": { "message": "Passyble", "description": "Extension name (at most 75 characters)." },
+  "popupLookUp": {
+    "message": "Look up $SITE$ as $USER$",
+    "description": "Search button of the popup.",
+    "placeholders": { "site": { "content": "$1", "example": "github.com" }, "user": { "content": "$2", "example": "ada" } }
+  },
+  "badgeLogins_one": { "message": "$COUNT$ login", "description": "Badge tooltip.", "placeholders": { "count": { "content": "$1", "example": "1" } } },
+  "badgeLogins_other": { "message": "$COUNT$ logins", "description": "Badge tooltip.", "placeholders": { "count": { "content": "$1", "example": "3" } } }
+}

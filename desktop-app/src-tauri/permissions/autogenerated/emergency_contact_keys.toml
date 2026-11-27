@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-emergency-contact-keys"
+description = "Enables the emergency_contact_keys command without any pre-configured scope."
+commands.allow = ["emergency_contact_keys"]
+
+[[permission]]
+identifier = "deny-emergency-contact-keys"
+description = "Denies the emergency_contact_keys command without any pre-configured scope."
+commands.deny = ["emergency_contact_keys"]

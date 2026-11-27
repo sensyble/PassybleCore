@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-card-info"
+description = "Enables the card_info command without any pre-configured scope."
+commands.allow = ["card_info"]
+
+[[permission]]
+identifier = "deny-card-info"
+description = "Denies the card_info command without any pre-configured scope."
+commands.deny = ["card_info"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-shared-vault-info"
+description = "Enables the shared_vault_info command without any pre-configured scope."
+commands.allow = ["shared_vault_info"]
+
+[[permission]]
+identifier = "deny-shared-vault-info"
+description = "Denies the shared_vault_info command without any pre-configured scope."
+commands.deny = ["shared_vault_info"]

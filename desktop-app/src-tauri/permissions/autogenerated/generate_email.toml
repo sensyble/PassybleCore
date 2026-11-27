@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-generate-email"
+description = "Enables the generate_email command without any pre-configured scope."
+commands.allow = ["generate_email"]
+
+[[permission]]
+identifier = "deny-generate-email"
+description = "Denies the generate_email command without any pre-configured scope."
+commands.deny = ["generate_email"]

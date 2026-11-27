@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-ai-tools-revoke"
+description = "Enables the ai_tools_revoke command without any pre-configured scope."
+commands.allow = ["ai_tools_revoke"]
+
+[[permission]]
+identifier = "deny-ai-tools-revoke"
+description = "Denies the ai_tools_revoke command without any pre-configured scope."
+commands.deny = ["ai_tools_revoke"]

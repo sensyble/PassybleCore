@@ -1,0 +1,14 @@
+[meta]
+name = "Deutsch"
+dir = "up"
+
+[email]
+hello_subject = "Hallo {{usr}}"
+bye_subject = "Tschüss"
+
+[time.days]
+one = "{{count}} Tag"
+
+[page]
+intro = "Willkommen bei {{server_name}}."
+note = ""

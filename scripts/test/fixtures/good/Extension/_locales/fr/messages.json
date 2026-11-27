@@ -1,0 +1,6 @@
+{
+  "catalogLocale": { "message": "fr" },
+  "extName": { "message": "Passyble" },
+  "badgeLogins_one": { "message": "$COUNT$ identifiant", "placeholders": { "count": { "content": "$1" } } },
+  "badgeLogins_other": { "message": "$COUNT$ identifiants", "placeholders": { "count": { "content": "$1" } } }
+}

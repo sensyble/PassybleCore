@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-vault-link-decline"
+description = "Enables the vault_link_decline command without any pre-configured scope."
+commands.allow = ["vault_link_decline"]
+
+[[permission]]
+identifier = "deny-vault-link-decline"
+description = "Denies the vault_link_decline command without any pre-configured scope."
+commands.deny = ["vault_link_decline"]

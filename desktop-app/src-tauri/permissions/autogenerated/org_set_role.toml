@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-set-role"
+description = "Enables the org_set_role command without any pre-configured scope."
+commands.allow = ["org_set_role"]
+
+[[permission]]
+identifier = "deny-org-set-role"
+description = "Denies the org_set_role command without any pre-configured scope."
+commands.deny = ["org_set_role"]

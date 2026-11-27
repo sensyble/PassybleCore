@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-emergency-request"
+description = "Enables the emergency_request command without any pre-configured scope."
+commands.allow = ["emergency_request"]
+
+[[permission]]
+identifier = "deny-emergency-request"
+description = "Denies the emergency_request command without any pre-configured scope."
+commands.deny = ["emergency_request"]

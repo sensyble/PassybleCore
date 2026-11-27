@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-invite-cancel"
+description = "Enables the org_invite_cancel command without any pre-configured scope."
+commands.allow = ["org_invite_cancel"]
+
+[[permission]]
+identifier = "deny-org-invite-cancel"
+description = "Denies the org_invite_cancel command without any pre-configured scope."
+commands.deny = ["org_invite_cancel"]

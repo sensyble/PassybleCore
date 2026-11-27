@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-sign-out-device"
+description = "Enables the server_sign_out_device command without any pre-configured scope."
+commands.allow = ["server_sign_out_device"]
+
+[[permission]]
+identifier = "deny-server-sign-out-device"
+description = "Denies the server_sign_out_device command without any pre-configured scope."
+commands.deny = ["server_sign_out_device"]

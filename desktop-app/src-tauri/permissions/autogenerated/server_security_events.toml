@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-security-events"
+description = "Enables the server_security_events command without any pre-configured scope."
+commands.allow = ["server_security_events"]
+
+[[permission]]
+identifier = "deny-server-security-events"
+description = "Denies the server_security_events command without any pre-configured scope."
+commands.deny = ["server_security_events"]

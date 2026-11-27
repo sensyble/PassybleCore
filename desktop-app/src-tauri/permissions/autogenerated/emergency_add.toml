@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-emergency-add"
+description = "Enables the emergency_add command without any pre-configured scope."
+commands.allow = ["emergency_add"]
+
+[[permission]]
+identifier = "deny-emergency-add"
+description = "Denies the emergency_add command without any pre-configured scope."
+commands.deny = ["emergency_add"]

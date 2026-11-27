@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-health-breach-cancel"
+description = "Enables the health_breach_cancel command without any pre-configured scope."
+commands.allow = ["health_breach_cancel"]
+
+[[permission]]
+identifier = "deny-health-breach-cancel"
+description = "Denies the health_breach_cancel command without any pre-configured scope."
+commands.deny = ["health_breach_cancel"]

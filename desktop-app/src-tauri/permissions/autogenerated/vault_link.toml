@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-vault-link"
+description = "Enables the vault_link command without any pre-configured scope."
+commands.allow = ["vault_link"]
+
+[[permission]]
+identifier = "deny-vault-link"
+description = "Denies the vault_link command without any pre-configured scope."
+commands.deny = ["vault_link"]

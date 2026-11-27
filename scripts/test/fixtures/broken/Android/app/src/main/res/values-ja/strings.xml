@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="greet">こんにちは %1$s、<xliff:g id="pct">%2$d</xliff:g>%% 完了</string>
+    <plurals name="items">
+        <item quantity="one"><xliff:g id="n">%1$d</xliff:g> 件</item>
+        <item quantity="other"><xliff:g id="n">%1$d</xliff:g> 件</item>
+    </plurals>
+</resources>

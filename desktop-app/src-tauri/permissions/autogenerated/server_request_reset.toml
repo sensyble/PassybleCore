@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-request-reset"
+description = "Enables the server_request_reset command without any pre-configured scope."
+commands.allow = ["server_request_reset"]
+
+[[permission]]
+identifier = "deny-server-request-reset"
+description = "Denies the server_request_reset command without any pre-configured scope."
+commands.deny = ["server_request_reset"]

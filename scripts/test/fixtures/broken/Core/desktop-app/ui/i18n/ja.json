@@ -1,0 +1,4 @@
+{
+  "_meta": { "name": "Japanese", "native": "日本語" },
+  "items.count": { "one": "{count} 件", "other": "{count} 件" }
+}

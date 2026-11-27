@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-admin-recovery-requests"
+description = "Enables the org_admin_recovery_requests command without any pre-configured scope."
+commands.allow = ["org_admin_recovery_requests"]
+
+[[permission]]
+identifier = "deny-org-admin-recovery-requests"
+description = "Denies the org_admin_recovery_requests command without any pre-configured scope."
+commands.deny = ["org_admin_recovery_requests"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-activity"
+description = "Enables the org_activity command without any pre-configured scope."
+commands.allow = ["org_activity"]
+
+[[permission]]
+identifier = "deny-org-activity"
+description = "Denies the org_activity command without any pre-configured scope."
+commands.deny = ["org_activity"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-item-share"
+description = "Enables the item_share command without any pre-configured scope."
+commands.allow = ["item_share"]
+
+[[permission]]
+identifier = "deny-item-share"
+description = "Denies the item_share command without any pre-configured scope."
+commands.deny = ["item_share"]

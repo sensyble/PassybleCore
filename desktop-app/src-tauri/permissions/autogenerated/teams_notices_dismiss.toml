@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-teams-notices-dismiss"
+description = "Enables the teams_notices_dismiss command without any pre-configured scope."
+commands.allow = ["teams_notices_dismiss"]
+
+[[permission]]
+identifier = "deny-teams-notices-dismiss"
+description = "Denies the teams_notices_dismiss command without any pre-configured scope."
+commands.deny = ["teams_notices_dismiss"]

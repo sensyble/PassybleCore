@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-started"
+description = "Enables the get_started command without any pre-configured scope."
+commands.allow = ["get_started"]
+
+[[permission]]
+identifier = "deny-get-started"
+description = "Denies the get_started command without any pre-configured scope."
+commands.deny = ["get_started"]

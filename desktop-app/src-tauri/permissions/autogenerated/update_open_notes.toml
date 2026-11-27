@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-update-open-notes"
+description = "Enables the update_open_notes command without any pre-configured scope."
+commands.allow = ["update_open_notes"]
+
+[[permission]]
+identifier = "deny-update-open-notes"
+description = "Denies the update_open_notes command without any pre-configured scope."
+commands.deny = ["update_open_notes"]

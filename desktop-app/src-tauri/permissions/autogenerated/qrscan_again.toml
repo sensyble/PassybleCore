@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-qrscan-again"
+description = "Enables the qrscan_again command without any pre-configured scope."
+commands.allow = ["qrscan_again"]
+
+[[permission]]
+identifier = "deny-qrscan-again"
+description = "Denies the qrscan_again command without any pre-configured scope."
+commands.deny = ["qrscan_again"]

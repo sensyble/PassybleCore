@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-departments"
+description = "Enables the org_departments command without any pre-configured scope."
+commands.allow = ["org_departments"]
+
+[[permission]]
+identifier = "deny-org-departments"
+description = "Denies the org_departments command without any pre-configured scope."
+commands.deny = ["org_departments"]

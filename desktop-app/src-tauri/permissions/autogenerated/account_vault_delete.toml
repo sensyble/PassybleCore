@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-account-vault-delete"
+description = "Enables the account_vault_delete command without any pre-configured scope."
+commands.allow = ["account_vault_delete"]
+
+[[permission]]
+identifier = "deny-account-vault-delete"
+description = "Denies the account_vault_delete command without any pre-configured scope."
+commands.deny = ["account_vault_delete"]

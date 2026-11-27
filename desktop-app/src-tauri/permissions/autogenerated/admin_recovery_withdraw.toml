@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-admin-recovery-withdraw"
+description = "Enables the admin_recovery_withdraw command without any pre-configured scope."
+commands.allow = ["admin_recovery_withdraw"]
+
+[[permission]]
+identifier = "deny-admin-recovery-withdraw"
+description = "Denies the admin_recovery_withdraw command without any pre-configured scope."
+commands.deny = ["admin_recovery_withdraw"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-health-breach-notice"
+description = "Enables the health_breach_notice command without any pre-configured scope."
+commands.allow = ["health_breach_notice"]
+
+[[permission]]
+identifier = "deny-health-breach-notice"
+description = "Denies the health_breach_notice command without any pre-configured scope."
+commands.deny = ["health_breach_notice"]

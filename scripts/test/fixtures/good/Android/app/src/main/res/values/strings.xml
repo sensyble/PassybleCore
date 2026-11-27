@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fixture for scripts/test/i18n-check.test.mjs. -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- The app's name. -->
+    <string name="app_name">Passyble</string>
+    <!-- Greeting. %1$s: a name, %2$d: a percentage. -->
+    <string name="greet">Hello <xliff:g id="name" example="Ada">%1$s</xliff:g>, it\'s <xliff:g id="pct" example="5">%2$d</xliff:g>%% done</string>
+    <!-- Not translated. -->
+    <string name="charset" translatable="false">A-Z</string>
+    <!-- Save &amp; sync button. -->
+    <string name="save_sync">Save &amp; sync</string>
+    <!-- Markup kept as text. -->
+    <string name="markup"><![CDATA[<b>Bold</b>]]> text</string>
+    <!-- %1$d: a count. -->
+    <plurals name="items">
+        <item quantity="one"><xliff:g id="n" example="1">%1$d</xliff:g> item</item>
+        <item quantity="other"><xliff:g id="n" example="2">%1$d</xliff:g> items</item>
+    </plurals>
+</resources>

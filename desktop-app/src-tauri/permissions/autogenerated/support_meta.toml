@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-support-meta"
+description = "Enables the support_meta command without any pre-configured scope."
+commands.allow = ["support_meta"]
+
+[[permission]]
+identifier = "deny-support-meta"
+description = "Denies the support_meta command without any pre-configured scope."
+commands.deny = ["support_meta"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-2fa-disable"
+description = "Enables the server_2fa_disable command without any pre-configured scope."
+commands.allow = ["server_2fa_disable"]
+
+[[permission]]
+identifier = "deny-server-2fa-disable"
+description = "Denies the server_2fa_disable command without any pre-configured scope."
+commands.deny = ["server_2fa_disable"]

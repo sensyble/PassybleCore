@@ -1,0 +1,5 @@
+{
+  "note": "Which updater key signs the next release. Installed apps only accept an update signed by the key whose public key they embed (plugins.updater.pubkey). The first release that embeds a new public key is signed with the previous key, so the installed apps accept it: signWith \"previous\". Every release after it is signed with the current key: signWith \"current\". scripts/release-feed.mjs refuses a signature by the other key.",
+  "signWith": "previous",
+  "previousPubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDhCNUYwNkYxNUQxQjEzMjQKUldRa0V4dGQ4UVpmaTJIZzZDU1UyWEhiUG5HdzVOOTlIQnV0aElBZzl0UU5OWXd1Ry9iK2V3Z1QK"
+}

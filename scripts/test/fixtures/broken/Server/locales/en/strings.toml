@@ -1,0 +1,17 @@
+# Fixture for scripts/test/i18n-check.test.mjs.
+[meta]
+name = "English"
+dir = "ltr"
+
+[email]
+hello_subject = "Hello {{user}}"
+
+[time.days]
+one = "{{count}} day"
+other = "{{count}} days"
+
+[page]
+intro = "Welcome to <b>{{server_name}}</b>."
+note = """
+A long note
+on two lines."""

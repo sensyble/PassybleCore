@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-vault-pins"
+description = "Enables the vault_pins command without any pre-configured scope."
+commands.allow = ["vault_pins"]
+
+[[permission]]
+identifier = "deny-vault-pins"
+description = "Denies the vault_pins command without any pre-configured scope."
+commands.deny = ["vault_pins"]

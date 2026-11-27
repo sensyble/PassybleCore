@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-server-code-signin"
+description = "Enables the server_code_signin command without any pre-configured scope."
+commands.allow = ["server_code_signin"]
+
+[[permission]]
+identifier = "deny-server-code-signin"
+description = "Denies the server_code_signin command without any pre-configured scope."
+commands.deny = ["server_code_signin"]

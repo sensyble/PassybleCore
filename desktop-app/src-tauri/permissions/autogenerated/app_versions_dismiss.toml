@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-app-versions-dismiss"
+description = "Enables the app_versions_dismiss command without any pre-configured scope."
+commands.allow = ["app_versions_dismiss"]
+
+[[permission]]
+identifier = "deny-app-versions-dismiss"
+description = "Denies the app_versions_dismiss command without any pre-configured scope."
+commands.deny = ["app_versions_dismiss"]

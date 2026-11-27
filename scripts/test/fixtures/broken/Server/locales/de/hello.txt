@@ -1,0 +1,2 @@
+Hallo {{user}},
+Öffne den Link.

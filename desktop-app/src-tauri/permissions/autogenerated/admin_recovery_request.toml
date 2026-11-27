@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-admin-recovery-request"
+description = "Enables the admin_recovery_request command without any pre-configured scope."
+commands.allow = ["admin_recovery_request"]
+
+[[permission]]
+identifier = "deny-admin-recovery-request"
+description = "Denies the admin_recovery_request command without any pre-configured scope."
+commands.deny = ["admin_recovery_request"]

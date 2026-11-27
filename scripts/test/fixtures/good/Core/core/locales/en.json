@@ -1,0 +1,6 @@
+{
+  "_meta": { "name": "English", "native": "English" },
+  "server.enter_address": "enter the server address",
+  "webdav.auth_failed": "{action}: authentication failed",
+  "merge.websites": { "one": "website", "other": "{count} websites" }
+}

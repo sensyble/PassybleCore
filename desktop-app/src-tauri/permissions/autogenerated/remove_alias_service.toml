@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-remove-alias-service"
+description = "Enables the remove_alias_service command without any pre-configured scope."
+commands.allow = ["remove_alias_service"]
+
+[[permission]]
+identifier = "deny-remove-alias-service"
+description = "Denies the remove_alias_service command without any pre-configured scope."
+commands.deny = ["remove_alias_service"]

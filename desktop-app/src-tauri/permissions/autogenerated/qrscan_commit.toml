@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-qrscan-commit"
+description = "Enables the qrscan_commit command without any pre-configured scope."
+commands.allow = ["qrscan_commit"]
+
+[[permission]]
+identifier = "deny-qrscan-commit"
+description = "Denies the qrscan_commit command without any pre-configured scope."
+commands.deny = ["qrscan_commit"]

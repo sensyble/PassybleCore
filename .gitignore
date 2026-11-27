@@ -1,0 +1,14 @@
+# From the monorepo's root .gitignore
+**/node_modules/
+.DS_Store
+*.iml
+.idea/
+/target/
+desktop-app/gen/
+
+# Google OAuth client for local desktop builds (docs/GOOGLE_DRIVE.md)
+desktop-app/src-tauri/google-oauth.env
+
+# Sidecar copied in by ../Windows/installer/build-native-host.ps1 for installer builds
+desktop-app/src-tauri/binaries/
+dist-local/

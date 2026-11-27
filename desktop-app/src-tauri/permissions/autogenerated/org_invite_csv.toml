@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-invite-csv"
+description = "Enables the org_invite_csv command without any pre-configured scope."
+commands.allow = ["org_invite_csv"]
+
+[[permission]]
+identifier = "deny-org-invite-csv"
+description = "Denies the org_invite_csv command without any pre-configured scope."
+commands.deny = ["org_invite_csv"]

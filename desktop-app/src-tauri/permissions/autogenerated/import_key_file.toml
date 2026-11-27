@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-import-key-file"
+description = "Enables the import_key_file command without any pre-configured scope."
+commands.allow = ["import_key_file"]
+
+[[permission]]
+identifier = "deny-import-key-file"
+description = "Denies the import_key_file command without any pre-configured scope."
+commands.deny = ["import_key_file"]

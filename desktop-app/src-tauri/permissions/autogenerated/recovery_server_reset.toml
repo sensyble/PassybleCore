@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-recovery-server-reset"
+description = "Enables the recovery_server_reset command without any pre-configured scope."
+commands.allow = ["recovery_server_reset"]
+
+[[permission]]
+identifier = "deny-recovery-server-reset"
+description = "Denies the recovery_server_reset command without any pre-configured scope."
+commands.deny = ["recovery_server_reset"]

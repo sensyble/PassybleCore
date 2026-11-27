@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-url-suggests-host-only"
+description = "Enables the url_suggests_host_only command without any pre-configured scope."
+commands.allow = ["url_suggests_host_only"]
+
+[[permission]]
+identifier = "deny-url-suggests-host-only"
+description = "Denies the url_suggests_host_only command without any pre-configured scope."
+commands.deny = ["url_suggests_host_only"]

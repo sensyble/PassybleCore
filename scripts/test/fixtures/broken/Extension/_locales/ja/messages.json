@@ -1,0 +1,6 @@
+{
+  "catalogLocale": { "message": "ja" },
+  "popupLookUp": { "message": "$SITE$ を検索", "placeholders": { "site": { "content": "$1" } } },
+  "badgeLogins_one": { "message": "$COUNT$ 件", "placeholders": { "count": { "content": "$1" } } },
+  "badgeLogins_other": { "message": "$COUNT$ 件", "placeholders": { "count": { "content": "$1" } } }
+}

@@ -1,0 +1,7 @@
+{
+  "_meta": { "name": "English", "native": "English" },
+  "greet.hello": "Hello {name}",
+  "items.count": { "one": "{count} item", "other": "{count} items" },
+  "items.in_folder": { "one": "One item in {folder}", "other": "{count} items in {folder}" },
+  "app.title": "Passyble"
+}

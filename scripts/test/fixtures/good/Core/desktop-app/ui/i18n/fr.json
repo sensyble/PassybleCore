@@ -1,0 +1,6 @@
+{
+  "_meta": { "name": "French", "native": "Français" },
+  "greet.hello": "Bonjour {name}",
+  "items.count": { "one": "{count} élément", "many": "{count} d’éléments", "other": "{count} éléments" },
+  "items.in_folder": { "one": "{count} élément dans {folder}", "other": "{count} éléments dans {folder}" }
+}

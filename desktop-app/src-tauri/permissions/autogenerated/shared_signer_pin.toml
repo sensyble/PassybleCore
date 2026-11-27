@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-shared-signer-pin"
+description = "Enables the shared_signer_pin command without any pre-configured scope."
+commands.allow = ["shared_signer_pin"]
+
+[[permission]]
+identifier = "deny-shared-signer-pin"
+description = "Denies the shared_signer_pin command without any pre-configured scope."
+commands.deny = ["shared_signer_pin"]

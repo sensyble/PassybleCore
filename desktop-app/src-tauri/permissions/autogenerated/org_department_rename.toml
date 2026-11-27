@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-org-department-rename"
+description = "Enables the org_department_rename command without any pre-configured scope."
+commands.allow = ["org_department_rename"]
+
+[[permission]]
+identifier = "deny-org-department-rename"
+description = "Denies the org_department_rename command without any pre-configured scope."
+commands.deny = ["org_department_rename"]

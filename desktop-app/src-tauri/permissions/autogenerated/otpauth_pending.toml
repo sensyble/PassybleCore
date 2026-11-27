@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-otpauth-pending"
+description = "Enables the otpauth_pending command without any pre-configured scope."
+commands.allow = ["otpauth_pending"]
+
+[[permission]]
+identifier = "deny-otpauth-pending"
+description = "Denies the otpauth_pending command without any pre-configured scope."
+commands.deny = ["otpauth_pending"]
