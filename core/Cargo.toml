@@ -41,7 +41,7 @@ aes-gcm = { version = "=0.10.3", default-features = false, features = ["aes", "a
 argon2 = "0.5"
 base64 = "0.22"
 cbc = { version = "=0.1.2", features = ["alloc"] }
-chacha20poly1305 = "0.10"
+chacha20poly1305 = "0.11"
 csv = "1"
 # Shared vaults: Ed25519 signatures of the member list and of each user's public keys. The same
 # version `pgp` brings in. No `fast` tables: a few signatures per change don't need them.
