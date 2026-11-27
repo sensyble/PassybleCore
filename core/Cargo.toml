@@ -79,7 +79,7 @@ thiserror = "2"
 # password typed on Windows, Android and iOS keyboards gives the same keys. MIT OR Apache-2.0.
 unicode-normalization = { version = "0.1", default-features = false, features = ["std"] }
 uniffi = { version = "0.29", optional = true, features = ["cli"] }
-ureq = { version = "2", optional = true }
+ureq = { version = "3", optional = true }
 url = "2"
 uuid = { version = "1", features = ["v4"] }
 zeroize = { version = "1", features = ["derive"] }
