@@ -15,7 +15,7 @@ path = "src/main.rs"
 
 [dependencies]
 # Secrets in command output, also base64-encoded (src/mask.rs); already in the tree through pass-core.
-base64 = "0.22"
+base64 = "0.23"
 # Substring search for the concealing; already in the tree through csv.
 memchr = "2"
 # `native`: the agent's local IPC client (`ipc::connect`, `ipc::server_is_allowed`).
