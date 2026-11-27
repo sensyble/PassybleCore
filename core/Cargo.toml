@@ -56,7 +56,7 @@ x25519-dalek = { version = "=2.0.1", default-features = false, features = ["stat
 hmac = "0.12"
 image = { version = "0.25", optional = true, default-features = false, features = ["png", "jpeg"] }
 # KeePass databases (feature `import-kdbx`). MIT.
-keepass = { version = "=0.15.3", optional = true, default-features = false }
+keepass = { version = "=0.17.0", optional = true, default-features = false }
 # Passkeys (ES256). 0.14 because 0.13 pulls crypto-bigint 0.5, whose RUSTSEC-2026-0387 timing
 # advisory reaches the signing path.
 p256 = { version = "0.14", features = ["ecdsa", "pkcs8"] }
@@ -105,4 +105,4 @@ rcgen = { version = "0.14", default-features = false, features = ["crypto", "pem
 qrcode = { version = "0.14", default-features = false }
 serde_json = "1"
 # Writes the KDBX 4 test databases of the KeePass import tests.
-keepass = { version = "=0.15.3", default-features = false, features = ["save_kdbx4"] }
+keepass = { version = "=0.17.0", default-features = false, features = ["save_kdbx4"] }
