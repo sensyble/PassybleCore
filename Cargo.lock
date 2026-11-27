@@ -527,6 +527,7 @@ dependencies = [
  "cfg-if",
  "cipher 0.5.2",
  "cpufeatures 0.3.1",
+ "rand_core 0.10.1",
 ]
 
 [[package]]
@@ -2035,7 +2036,7 @@ dependencies = [
  "num-integer",
  "num-iter",
  "num-traits",
- "rand",
+ "rand 0.8.8",
  "serde",
  "smallvec",
  "zeroize",
@@ -2233,7 +2234,7 @@ dependencies = [
  "pgp",
  "psl",
  "qrcode",
- "rand",
+ "rand 0.10.4",
  "rcgen",
  "rqrr",
  "rustls",
@@ -2422,7 +2423,7 @@ dependencies = [
  "p256 0.13.2",
  "p384",
  "p521",
- "rand",
+ "rand 0.8.8",
  "replace_with",
  "ripemd",
  "rsa",
@@ -2660,6 +2661,17 @@ dependencies = [
  "libc",
  "rand_chacha",
  "rand_core 0.6.4",
+]
+
+[[package]]
+name = "rand"
+version = "0.10.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f6fa277c67e6ea590466f04c3fe82cb509f0864fe470643e5570de9514a9b11"
+dependencies = [
+ "chacha20 0.10.2",
+ "getrandom 0.4.3",
+ "rand_core 0.10.1",
 ]
 
 [[package]]
